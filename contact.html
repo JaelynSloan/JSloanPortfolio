@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaelyn's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3e4d0c6727.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="index.html"><img src="images/logo.png" class="logo" /></a>
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+            <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+      </div>
+    </div>
+
+    <!--BANNER-->
+    <section id="banner">
+      <h4>Contact Me</h4>
+    </section>
+
+    <!-- CONTACT -->
+    <div id="contact">
+      <div class="container">
+        <div class="contact-head">
+          <h1 class="sub-title">I'd love to hear from you!</h1>
+          <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="row">
+          <div class="contact-left">
+            <p>
+              <i class="fa-solid fa-envelope"></i
+              ><a href="mailto:sloan.jaelyn@yahoo.com"
+                >sloan.jaelyn@yahoo.com</a
+              >
+            </p>
+            <p><i class="fa-solid fa-square-phone"></i>502.395.3018</p>
+            <p>
+              <i class="fa-brands fa-linkedin"></i>
+              <a
+                href="https://www.linkedin.com/in/jaelyn-sloan-2174b8186/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email Address"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="10"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--COPYRIGHT-->
+    <section class="copy">
+      <p>&copy; 2023, Jaelyn Sloan - Personal Portfolio</p>
+    </section>
+
+    <!-- JS SIDEMENU -->
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+    <!-- JS CONTACT FORM -->
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycby9v-5515NS7a8KkDgWl5jY2uiJqIm7jsHWvLUVwf_ixQ2llg8b0FdkgEsIzflq_Dx0/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully!";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

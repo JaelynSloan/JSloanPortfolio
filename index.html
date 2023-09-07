@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaelyn's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3e4d0c6727.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Playfair+Display&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <div id="home-menu">
+        <nav>
+          <ul id="menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><i class="fa-solid fa-x" onclick="closeMenu()"></i>
+          </ul></li>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+    </div>
+
+    <!-- HOMEPAGE -->
+    <section id="home" class="home">
+      <div id="socials">
+        <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=100007142320463" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a></li>
+        <li></li><a href="https://www.instagram.com/j.ae.lyn/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a></li>
+        <li></li><a href="https://www.linkedin.com/in/jaelyn-sloan-2174b8186/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i></a></li>
+        <li></li><a href="https://github.com/JaelynSloan" target="_blank"
+          ><i class="fa-brands fa-github"></i></a></li>
+      </ul>
+      </div>
+      <div class="home-text">
+        <h2>Hi, my name is</h2>
+        <h1>Jaelyn Sloan</h1>
+        <h3>Front-End Developer/Web Developer</h3>
+        <p>
+          I am a passionate software engineer based in Kentucky. I specialize in
+          UX/UI design and website development.
+        </p>
+      </div>
+      <!-- <div id="menu">
+        <div class="container">
+          <nav>
+            <ul id="menu">
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+            </ul>
+            <i id="bars" class="fa-solid fa-bars" onclick="openMenu()"></i>
+          </nav>
+        </div>
+      </div> -->
+    </section>
+
+    <!--COPYRIGHT-->
+    <section class="copy">
+      <p>&copy; 2023, Jaelyn Sloan - Personal Portfolio</p>
+    </section>
+
+    <!-- JS SIDEMENU -->
+    <script>
+      var sidemenu = document.getElementById("menu");
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+  </body>
+</html>
