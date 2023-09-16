@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaelyn's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+    src="https://kit.fontawesome.com/3e4d0c6727.js"
+    crossorigin="anonymous"
+  ></script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="index.html"><img src="images/logo.png" class="logo" /></a>
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+      </div>
+    </div>
+
+    <!--BANNER-->
+    <section id="banner">
+      <h4>About Me</h4>
+    </section>
+
+    <!-- ABOUT -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/selfie.jpg" />
+          </div>
+          <div class="about-col-2">
+            <p>
+              My name is Jaelyn Sloan and I am from Frankfort, Kentucky. I am a
+              Junior Software Developer with a Bachelor's of Science in Computer
+              Science with a concentration in Software Engineering from Southern
+              New Hampshire University. I have experience with UI/UX design,
+              front and back-end programming, cloud services, and Andriod
+              applications.
+            </p>
+            <br />
+            <p>
+              I am very passionate about creating beautiful interfaces using
+              HTML, CSS, and JavaScript as a front-end developer. I enjoy
+              solving problems and facing challenges in my work. I hope to put my experience and motivation to work for you!
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <!---- Skills -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><h2>Languages</h2>
+					<ul>
+						<li>Java</li>
+						<li>JavaScript</li>
+            <li>C/C++</li>
+				    <li>Python</li>
+					</ul>
+        </li>
+        <li><h2>Web Devlopment</h2>
+					<ul>
+						<li>HTML</li>
+				  		<li>CSS</li>
+				  		<li>React</li>
+				  		<li>Angular</li>
+					</ul>
+                </li>
+				<li><h2>UI/UX</h2>
+					<li>Designing Web/App interfaces</li>
+                <li><h2>Version Control</h2>
+					<li>Git</li>
+				</li>
+              </ul>
+            </div>
+            <!----Education-->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><h2>2021 - 2023</h2>
+					<h3>BS in Computer Science with a concentration in Software Engineering <br>Southern New Hampshire University</h3>
+                  <ul>
+					<li>Graduated September 2023</li>
+					<li>3.85 GPA</li>
+					<li>Named to Honor Roll x9</li>
+					<li>Named to President's List x4</li>
+				  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add(
+          "active-link"
+        ); /* underline will activate on whichever tab is clicked on */
+        document
+          .getElementById(tabname)
+          .classList.add("active-tab"); /* Display contents under active tab */
+      }
+    </script>
+
+    <!-- JS SIDEMENU -->
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+  </body>
+</html>

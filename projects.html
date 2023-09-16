@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaelyn's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3e4d0c6727.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="index.html"><img src="images/logo.png" class="logo" /></a>
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+      </div>
+    </div>
+
+    <!--BANNER-->
+    <section id="banner">
+      <h4>My Projects</h4>
+    </section>
+
+    <!-- PROJECTS -->
+    <div id="projects">
+      <div class="container">
+        <div class="work-list">
+          <div class="work">
+            <img src="images/ecommerce.jpg" />
+            <div class="layer">
+              <h3>E-Commerce Website</h3>
+              <p>
+                This is a basic e-commerce website with a responsive design to
+                demsonstrate front-end only. This website was developed using
+                HTML, CSS, and JavaScript.
+              </p>
+              <a
+                href="https://jaelynsloan.github.io/Ecommerce-Plant-Shop/"
+                target="_blank"
+                ><i class="fa-solid fa-square-up-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/weather.jpg" />
+            <div class="layer">
+              <h3>Weather App</h3>
+              <p>
+                This is a very simple weather app that uses OpenWeatherMap API
+                to get real time weather data. The app was developed using HTML,
+                CSS, and JavaScript.
+              </p>
+              <a href="https://jaelynsloan.github.io/Weather-App/"
+                ><i class="fa-solid fa-square-up-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/music.jpg" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>This app ....</p>
+              <a href="#"><i class="fa-solid fa-square-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/JaelynSloan" class="btn" target="_blank"
+          >See More</a
+        >
+      </div>
+    </div>
+
+    <!-- JS SIDEMENU -->
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
